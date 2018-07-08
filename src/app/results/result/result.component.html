@@ -1,0 +1,33 @@
+<div class="container">
+  <h5>Add new result</h5>
+  <div class="row">
+    <mat-form-field>
+      <mat-select [(ngModel)]="result.player">
+        <mat-option *ngFor="let p of players" value="p">{{p.name}} {{p.surname}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <input matInput type="number" placeholder="Series" [(ngModel)]="result.series">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <input matInput type="number" placeholder="Throws" [(ngModel)]="result.throws">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-checkbox [(ngModel)]="result.dnf">
+      Dnf
+    </mat-checkbox>
+    <mat-checkbox style="padding-left: 20px" [(ngModel)]="result.doubleOut">
+      2Out
+    </mat-checkbox>
+  </div>
+  <div class="row">
+      <mat-form-field>
+        <input matInput type="number" placeholder="Best score" [(ngModel)]="result.bestScore" max=180 min=0>
+      </mat-form-field>
+    </div>
+</div>
