@@ -11,6 +11,7 @@ import { MatToolbarModule,
   MatInputModule,
   MatCheckboxModule,
   MatOptionModule,
+  MatButton,
 MatSelectModule } from '@angular/material';
 
 import { AppComponent } from './app.component';

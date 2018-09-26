@@ -1,5 +1,5 @@
 <div class="container">
-  <h5>Add new result</h5>
+  <h5>Nowy wynik</h5>
   <div class="row">
     <mat-form-field>
       <mat-select [(ngModel)]="result.player">
@@ -9,12 +9,12 @@
   </div>
   <div class="row">
     <mat-form-field>
-      <input matInput type="number" placeholder="Series" [(ngModel)]="result.series" max=10 min=0>
+      <input matInput type="number" placeholder="Seria" [(ngModel)]="result.series" max=10 min=0>
     </mat-form-field>
   </div>
   <div class="row">
     <mat-form-field>
-      <input matInput type="number" placeholder="Throws" [(ngModel)]="result.throws" max=3 min=0>
+      <input matInput type="number" placeholder="Rzut" [(ngModel)]="result.throws" max=3 min=0>
     </mat-form-field>
   </div>
   <div class="row">
@@ -27,7 +27,12 @@
   </div>
   <div class="row">
       <mat-form-field>
-        <input matInput type="number" placeholder="Best score" [(ngModel)]="result.bestScore" max=180 min=0>
+        <input matInput type="number" placeholder="Najwyższy wynik" [(ngModel)]="result.bestScore" max=180 min=0>
       </mat-form-field>
+    </div>
+    <div class="row">
+        <button mat-stroked-button style="width: 180px" (click)="setResult()">
+          Dodaj wynik
+        </button >
     </div>
 </div>
