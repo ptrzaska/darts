@@ -9,12 +9,12 @@
   </div>
   <div class="row">
     <mat-form-field>
-      <input matInput type="number" placeholder="Series" [(ngModel)]="result.series">
+      <input matInput type="number" placeholder="Series" [(ngModel)]="result.series" max=10 min=0>
     </mat-form-field>
   </div>
   <div class="row">
     <mat-form-field>
-      <input matInput type="number" placeholder="Throws" [(ngModel)]="result.throws">
+      <input matInput type="number" placeholder="Throws" [(ngModel)]="result.throws" max=3 min=0>
     </mat-form-field>
   </div>
   <div class="row">
