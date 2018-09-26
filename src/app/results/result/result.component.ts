@@ -20,6 +20,7 @@ export class ResultComponent implements OnInit {
 
   setResult(){
     this.resultSet.emit(this.result);
+    this.result = {} as Result;
   }
 
 }
