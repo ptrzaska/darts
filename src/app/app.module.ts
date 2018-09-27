@@ -48,6 +48,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { SeasonResultsComponent } from './season-results/season-results.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
     TableResultComponent,
     SeasonResultsComponent,
     ArchiveComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    AdminComponent
   ],
   imports: [
     FormsModule,
