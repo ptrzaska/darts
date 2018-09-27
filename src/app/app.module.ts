@@ -44,6 +44,10 @@ import { RoundResultComponent } from './results/round-result/round-result.compon
 import { ResultComponent } from './results/result/result.component';
 import { FormsModule } from '@angular/forms';
 import { TableResultComponent } from './results/table-result/table-result.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { SeasonResultsComponent } from './season-results/season-results.component';
+import { ArchiveComponent } from './archive/archive.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +55,10 @@ import { TableResultComponent } from './results/table-result/table-result.compon
     ClasificationComponent,
     RoundResultComponent,
     ResultComponent,
-    TableResultComponent
+    TableResultComponent,
+    SeasonResultsComponent,
+    ArchiveComponent,
+    StatisticsComponent
   ],
   imports: [
     FormsModule,
@@ -91,7 +98,8 @@ import { TableResultComponent } from './results/table-result/table-result.compon
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule,   
+  MatTreeModule,
+  AppRoutingModule,   
   ],
   providers: [],
   bootstrap: [AppComponent]
