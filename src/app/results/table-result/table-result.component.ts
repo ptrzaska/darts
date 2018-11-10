@@ -14,12 +14,12 @@ const test_data: Result[] = [
   styleUrls: ['./table-result.component.css']
 })
 export class TableResultComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'surname', 'series', 'throws'];
+  displayedColumns: string[] = ['name', 'surname', 'series', 'throws', 'total', '2out', 'dnf', 'record', 'points'];
   dataSource = test_data;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {    
   }
 
 }

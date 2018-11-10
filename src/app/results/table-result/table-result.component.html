@@ -1,32 +1,64 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%">
 
-    <!--- Note that these columns can be defined in any order.
+  <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Imie </th>
+    <td mat-cell *matCellDef="let element"> {{element.player.name}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="surname">
+    <th mat-header-cell *matHeaderCellDef> Nazwisko </th>
+    <td mat-cell *matCellDef="let element"> {{element.player.surname}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="series">
+    <th mat-header-cell *matHeaderCellDef> Seria </th>
+    <td mat-cell *matCellDef="let element"> {{element.series}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="throws">
+    <th mat-header-cell *matHeaderCellDef> Rzut </th>
+    <td mat-cell *matCellDef="let element"> {{element.throws}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="total">
+    <th mat-header-cell *matHeaderCellDef> Łącznie </th>
+    <td mat-cell *matCellDef="let element"> {{(element.series*3) - (3-element.throws)}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="2out">
+    <th mat-header-cell *matHeaderCellDef> 2out </th>
+    <td mat-cell *matCellDef="let element">
+      <mat-icon *ngIf="element.doubleOut">check</mat-icon>       
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dnf">
+    <th mat-header-cell *matHeaderCellDef> Dnf </th>
+    <td mat-cell *matCellDef="let element">
+        <mat-icon *ngIf="element.dnf">check</mat-icon>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="record">
+      <th mat-header-cell *matHeaderCellDef> Rekord </th>
+      <td mat-cell *matCellDef="let element">
+          <mat-icon *ngIf="element.bestScore == 100">star</mat-icon>
+      </td>
+  </ng-container>
+
+  <ng-container matColumnDef="points">
+      <th mat-header-cell *matHeaderCellDef> Punkty </th>
+      <td mat-cell *matCellDef="let element"></td>
+  </ng-container>
   
-    <!-- Position Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Imie </th>
-      <td mat-cell *matCellDef="let element"> {{element.player.name}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="surname">
-      <th mat-header-cell *matHeaderCellDef> Nazwisko </th>
-      <td mat-cell *matCellDef="let element"> {{element.player.surname}} </td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="series">
-      <th mat-header-cell *matHeaderCellDef> Seria </th>
-      <td mat-cell *matCellDef="let element"> {{element.series}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="throws">
-      <th mat-header-cell *matHeaderCellDef> Rzut </th>
-      <td mat-cell *matCellDef="let element"> {{element.throws}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

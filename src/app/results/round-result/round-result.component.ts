@@ -1,6 +1,9 @@
 import { Player } from './../../models/player.model';
 import { Component, OnInit } from '@angular/core';
 
+
+
+
 @Component({
   selector: 'app-round-result',
   templateUrl: './round-result.component.html',
@@ -8,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoundResultComponent implements OnInit {
   players: Player[];
-  date: Date;  
+  date: Date;
+  
 
   constructor() { 
     this.players = [{id: 1, name: 'Przemek', surname: 'Trzaska'} as Player, 
