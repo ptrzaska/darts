@@ -1,3 +1,4 @@
+import { AdminComponent } from './admin/admin.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import { ResultComponent } from './results/result/result.component';
@@ -12,21 +13,25 @@ const routes: Routes = [
     redirectTo: 'results',
     pathMatch: 'full'
   },
-  { 
-    path: 'results', 
-    component: RoundResultComponent 
+  {
+    path: 'results',
+    component: RoundResultComponent
   },
-  { 
-    path: 'season', 
+  {
+    path: 'season',
     component: SeasonResultsComponent
   },
-  { 
+  {
     path: 'archive',
     component: ArchiveComponent
   },
-  { 
+  {
     path: 'statistics',
     component: StatisticsComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 
